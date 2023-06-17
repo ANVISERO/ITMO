@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <link rel="stylesheet" href="./resourses/css/style.css"/>
+    <title>LAB3</title>
+</h:head>
+<h:body>
+    <div class="container">
+        <div class="header_container icon">
+            <span class="name">Ivanov Andrey Viacheslavovich</span>
+            <span>Group: P32101</span>
+            <span class="variant">Var: 1007</span>
+            <h:form class="link">
+                <h:commandButton action="toMain" value="To next page" style="background-color: #242424;
+                color: #afaeae; position: absolute; right: 0; height: 2em; justify-content: center; border-radius: 0.7em;"/>
+            </h:form>
+        </div>
+    </div>
+    <div class="main_container" style="display:flex; align-items: center; flex-direction: column">
+        <div id="clock" style="display:flex; font-size: 5em; justify-content: center; width: 100%"></div>
+        <div style="display: flex; justify-content: center; margin: 0">
+            <canvas width="300" height="300" id="clock-canvas" style="margin-top: 50px; width: 100%"/>
+        </div>
+    </div>
+    <script type="text/javascript" src="./resourses/js/clock1.js"></script>
+    <script type="text/javascript" src="./resourses/js/clock.js"></script>
+</h:body>
+</html>

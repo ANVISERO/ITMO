@@ -1,0 +1,21 @@
+@media screen and (min-width: 340px) {
+  .auth-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 320px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .auth-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,42 @@
+.graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 340px;
+  transition: all 0.2s ease-out;
+  border: none;
+}
+
+.graph:hover {
+  transform: translate(3px, -3px) scale(1.005);
+  box-shadow: -5px 5px 10px #6667AB;
+}
+
+#graph-svg {
+  cursor: crosshair;
+  margin: auto;
+}
+
+#graph-svg .graph-shape {
+  fill: #565555;
+  fill-opacity: 65%;
+}
+
+#graph-svg .graph-axle-text, .graph-axle-arrow, .graph-label {
+  fill: #afaeae;
+  font-weight: 700;
+}
+
+#graph-svg .graph-axle-line, .graph-point {
+  stroke: #afaeae;
+}
+
+.dot-hit {
+  fill: #6667AB;
+}
+
+.dot-miss {
+  fill: #ff0038;
+}

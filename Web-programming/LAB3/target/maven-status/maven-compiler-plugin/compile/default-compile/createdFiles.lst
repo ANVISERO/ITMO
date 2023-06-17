@@ -1,0 +1,9 @@
+anvisero/prog/lab3/markDAO/MarkDAO.class
+anvisero/prog/lab3/utils/PropertiesUtil.class
+anvisero/prog/lab3/markDTO/MarkDTO.class
+anvisero/prog/lab3/markDAO/BaseDAO.class
+anvisero/prog/lab3/beans/MarkManager.class
+anvisero/prog/lab3/beans/MarkMaker.class
+anvisero/prog/lab3/utils/HitMark.class
+anvisero/prog/lab3/service/MarkService.class
+anvisero/prog/lab3/model/Mark.class

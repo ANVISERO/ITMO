@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  text-align: center;
+  line-height: 2em;
+}
+
+.table_header {
+  background-color: #242424;
+  line-height: 3em;
+  color: #afaeae;
+}
+
+#result-table-body tr {
+  color: #afaeae;
+  border-color: #323232;
+}
+
+#result-table-body tr:hover {
+  cursor: default;
+  color: #6667AB;
+}
+
+thead tr {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-color:  #323232;
+}
+
+.no:hover {
+  color: #ff0038 !important;
+}

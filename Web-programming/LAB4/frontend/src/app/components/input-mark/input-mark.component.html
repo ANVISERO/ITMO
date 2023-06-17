@@ -1,0 +1,48 @@
+<div style="margin: auto">
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field_wrapper">
+      <div class="label">X</div>
+      <input
+        type="text"
+        maxlength="5"
+        placeholder='Input X value [-3 ... 3]'
+        (input)="validateX($event)"
+        (focusin)="errorService.clear()"
+        class='field icon'
+        formControlName="xValue"
+        id="xValue"
+      >
+    </div>
+    <div class="field_wrapper">
+      <div class="label">Y</div>
+      <input
+        type="text"
+        maxlength="5"
+        class='field icon'
+        placeholder='Input Y value [-3 ... 3]'
+        (input)="validateY($event)"
+        (focusin)="errorService.clear()"
+        formControlName="yValue"
+        id="yValue"
+      >
+    </div>
+    <div class="field_wrapper">
+      <div class="label">R</div>
+      <input
+        type="text"
+        maxlength="4"
+        placeholder='Input R value (0 ... 3]'
+        (input)="validateR($event)"
+        (focusin)="errorService.clear()"
+        class='field icon'
+        formControlName="rValue"
+        id="rValue"
+      >
+    </div>
+    <app-warning></app-warning>
+    <div class="field_control">
+      <button class="submit icon" type="submit" id="submit-btn">Submit</button>
+    </div>
+  </form>
+<!--  <button type="button" class="btn  btn-primary h-min w-25 mb-2" (click)="tableService.clearTable()">Clear</button>-->
+</div>

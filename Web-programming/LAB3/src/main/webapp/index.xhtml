@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+        >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <link rel="stylesheet" href="./resourses/css/style.css"/>
+    <title>LAB3</title>
+</h:head>
+<h:body>
+    <div class="container">
+        <div class="header_container icon">
+            <span class="name">Ivanov Andrey Viacheslavovich</span>
+            <span>Group: P32101</span>
+            <span class="variant">Var: 1007</span>
+            <h:form class="link">
+                <h:commandButton action="toStart" value="To previous page" style="background-color: #242424;
+                color: #afaeae; position: absolute; right: 0; height: 2em; justify-content: center; border-radius: 0.7em;"/>
+            </h:form>
+        </div>
+        <div class="main_container">
+            <div class="form_and_graph">
+                <div class="graph icon">
+                    <h:panelGroup class="graph icon" layout="block" id="svg-graph">
+                        <ui:include src="graph.xhtml"/>
+                    </h:panelGroup>
+                </div>
+                <div class="control_panel">
+                    <h:form class="form" id="form" method="GET">
+                        <div class="field_wrapper">
+                            <div class="label">X</div>
+                            <div class="slider" style="display: flex; flex-direction: column; text-align: center; justify-content: center; margin: auto; padding: 10px 0 0 1em;">
+                                <ace:sliderEntry value="#{markMaker.position}" min = "0" max = "80" axis="x" id="xValue"
+                                                 stepPercent="#{markMaker.percent}" length="290px">
+                                    <ace:ajax event="slideEnd" execute="@this" render="@form"/>
+                                </ace:sliderEntry>
+                                <h:outputText id="outputX" value="#{markMaker.XValue}" class="x-value" style="margin-top: 5px" />
+                            </div>
+                        </div>
+                        <div class="field_wrapper">
+                            <div class="label">Y</div>
+                            <h:inputText id="y-input" a:placeholder="In range [-5; 5]" maxlength="5" value="#{markMaker.YValue}"
+                                         converterMessage="Y value should be a number!" required="true"
+                                         requiredMessage="Y value is required!" autocomplete="off" styleClass="y-field field icon">
+                                <f:validateDoubleRange minimum="-5" maximum="5"/>
+                                <f:ajax event="keyup" render="errors" execute="@this"/>
+                            </h:inputText>
+                        </div>
+                        <div class="field_wrapper">
+                            <div class="label">R</div>
+                            <h:selectOneRadio value="#{markMaker.RValue}" id="r-inputs" class="r-buttons"
+                                              required="true" requiredMessage="X can not be empty">
+                                <f:selectItem itemLabel="1" itemValue="1"/>
+                                <f:selectItem itemLabel="2" itemValue="2"/>
+                                <f:selectItem itemLabel="3" itemValue="3"/>
+                                <f:selectItem itemLabel="4" itemValue="4"/>
+                                <f:selectItem itemLabel="5" itemValue="5"/>
+                            </h:selectOneRadio>
+                            <h:outputText value="#{markMaker.RValue}" class="r-value" style="display: none"/>
+                        </div>
+                        <div class="field_control">
+                            <h:commandButton class="submit icon" type="submit" id="submit-btn" value="Submit"
+                                             actionListener="#{markManager.addMark()}">
+                                <f:ajax execute="@form" render="result-table-body"/>
+                            </h:commandButton>
+                        </div>
+                    </h:form>
+
+                    <h:form id="hidden-form-timezone" style="margin-top:10px ">
+                        <h:inputHidden id="timezone-hidden" value="#{markManager.timezone}" />
+                        <h:commandButton style="display: none" id="hidden-timezone">
+                            <f:ajax execute="@form" render="result-table-body"/>
+                        </h:commandButton>
+                    </h:form>
+
+                    <h:form id="hidden-form" style="margin-top:10px ">
+                        <h:inputHidden id="hidden-x" value="#{markMaker.XValue}"/>
+                        <h:inputHidden id="hidden-y" value="#{markMaker.YValue}"/>
+                        <h:inputHidden id="hidden-r" value="#{markMaker.RValue}"/>
+                        <h:commandButton style="display: none" id="hidden-btn" actionListener="#{markManager.addMark()}">
+                            <f:ajax execute="@form" render="result-table-body"/>
+                        </h:commandButton>
+                    </h:form>
+                </div>
+            </div>
+            <div class="main_table icon">
+                <h:dataTable var="mark" value="#{markManager.marks}" id="result-table-body" styleClass="table">
+                    <h:column>
+                        <f:facet name="header" styleClass="table_header">X value</f:facet>
+                        #{mark.XValue}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header" styleClass="table_header">Y value</f:facet>
+                        #{mark.YValue}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header" styleClass="table_header">R value</f:facet>
+                        #{mark.RValue}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header" styleClass="table_header">Result</f:facet>
+                        #{mark.hit}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header" styleClass="table_header">Current time</f:facet>
+                        #{mark.time}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header" styleClass="table_header">Lead time</f:facet>
+                        #{mark.leadTime} mcs
+                    </h:column>
+                </h:dataTable>
+            </div>
+        </div>
+        <div class="notify disabled">
+            <h:messages id="errors" style="width: 100%; color: red; margin-top: 10px"/>
+        </div>
+    </div>
+    <script type="text/javascript" src="./resourses/js/index.js"></script>
+</h:body>
+</html>

@@ -1,0 +1,22 @@
+ <table class="table">
+    <thead>
+      <tr class="table_header">
+        <th>X value</th>
+        <th>Y value</th>
+        <th>R value</th>
+        <th>Area hit</th>
+        <th>Current time</th>
+        <th>Lead time</th>
+      </tr>
+    </thead>
+    <tbody id="result-table-body">
+      <tr *ngFor="let mark of tableService.marks" class="{{ mark.hit == 'hit' ? 'yes' : 'no' }}">
+        <td>{{ mark.xvalue }}</td>
+        <td>{{ mark.yvalue }}</td>
+        <td>{{ mark.rvalue }}</td>
+        <td style="color: {{ mark.hit == 'hit' ? '#6667AB' : 'red' }}">{{ mark.hit }}</td>
+        <td>{{ mark.time }}</td>
+        <td>{{ mark.leadTime?.toExponential(3)?.slice(0,5) }}ms</td>
+      </tr>
+    </tbody>
+ </table>

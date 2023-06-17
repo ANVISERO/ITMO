@@ -1,0 +1,19 @@
+html, body{
+  height: 100%;
+  font-size: 14px;
+  font-family: 'Century Gothic', sans-serif;
+  overflow-x: hidden;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #afaeae;
+  background-color: #323232;
+}
+
+.icon {
+  background-color: #242424;
+  color: #afaeae;
+  border: none;
+  border-radius: 0.7em;
+  box-shadow: 0 0 1px black, -0px -0px 1px black;
+}

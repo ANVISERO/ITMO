@@ -1,0 +1,183 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Century Gothic';
+  background-color: whitesmoke;
+}
+
+.main {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: whitesmoke;
+}
+
+.heading {
+  width: 100%;
+  font-size: 1.4em;
+  background-color: #4a4949;
+  color: whitesmoke;
+  text-align: center;
+  height: 50px;
+  font-family: fantasy;
+}
+
+.heading span:last-child {
+  margin-right: 0;
+}
+
+.name {
+  margin-right: 3%;
+}
+
+.variant {
+  margin-left: 3%;
+}
+
+.leftColumn {
+  width: 50%;
+  min-width: 24em;
+}
+
+.rightColumn {
+  width: 50%;
+}
+
+.graph {
+  margin: 5% 5% 5% 15%;
+}
+
+#graph-svg {
+  height: 20em;
+  cursor: crosshair;
+  margin: auto;
+}
+
+#graph-svg .graph-shape {
+  fill: #5681e7;
+  fill-opacity: 65%;
+}
+
+#graph-svg .graph-axle-text, .graph-axle-arrow, .graph-label {
+  fill: rgb(0, 0, 0);
+}
+
+#graph-svg .graph-axle-line, .graph-point {
+  stroke: #000;
+}
+
+.line {
+  stroke: transparent;
+}
+
+.line.active {
+  stroke: red;
+  stroke-width: 1px;
+}
+
+.line.pointer {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.inactive {
+  display: none;
+}
+
+.dot {
+  fill: red;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.form {
+  width: 80%;
+  margin: auto;
+  margin-left: 10%;
+  margin-right: 10px;
+}
+
+#submit-btn {
+  height: 30px;
+  width: 60px;
+  border-radius: 7px;
+  background: #323131;
+  border: none;
+  cursor: pointer;
+  transition: hover 0.1s ease-in-out;
+  color: white;
+}
+
+#submit-btn:hover {
+  background: rgb(140, 169, 210);
+}
+
+#submit-btn:active {
+  background: rgb(37, 88, 158);
+  color: white;
+}
+
+.notify {
+  color: red;
+  width: 80%;
+  position: fixed;
+  text-align: center;
+}
+
+.notify__message {
+  margin-left: 10%;
+  color: red;
+}
+
+.notify__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.notify__message.disabled {
+  display: none;
+}
+
+.table_of_results {
+  margin: auto;
+  margin-top: 30px;
+  height: 500px;
+  overflow-y: scroll;
+  border: 1px solid #323131;
+  box-sizing: border-box;
+  border-radius: 7px;
+  margin-right: 20%;
+}
+
+.table_of_results::-webkit-scrollbar {
+  display: none;
+}
+
+.table_of_results thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.table_of_results table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_of_results th, .table_of_results td {
+  padding: 10px;
+}
+
+.table_of_results th {
+  background: #323131;
+  color: whitesmoke;
+}
