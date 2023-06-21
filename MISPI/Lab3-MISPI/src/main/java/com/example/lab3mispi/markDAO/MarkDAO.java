@@ -20,6 +20,7 @@ public class MarkDAO implements BaseDAO<Mark> {
         initScript();
     }
 
+    // Add mark
     @Override
     public void addMark(Mark mark) {
         try {
