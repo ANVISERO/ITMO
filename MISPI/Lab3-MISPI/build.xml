@@ -31,7 +31,6 @@
 <!--     Упаковка проекта в исполняемый JAR-архив -->
     <target name="build" depends="compile" description="Упаковка скомпилированных файлов в исполняемый jar-архив">
         <echo>Building...</echo>
-        <sayhello />
         <mkdir dir="${webapp}"/>
         <copy todir="${webapp}">
             <fileset dir="${web}"/>
@@ -81,7 +80,6 @@
 
     <!-- Воспроизведение музыки по завершению сборки -->
     <target name="music" depends="build" description="Воспроизведение музыки по завершению сборки">
-        <taskdef name="sound" classname="org.apache.tools.ant.taskdefs.optional.sound.SoundTask"/>
         <sound>
             <success source="${sound-success}"/>
             <fail source="${sound-failure}"/>
@@ -92,22 +90,31 @@
     <macrodef name = "git">
         <attribute name = "command" />
         <attribute name = "dir" default = "" />
+        <attribute name = "arg" default = "" />
         <element name = "args" optional = "true" />
         <sequential>
-            <echo message = "git @{command}" />
+            <echo message = "git @{command} @{arg}" />
             <exec executable = "git" dir = "@{dir}">
                 <arg value = "@{command}" />
+                <arg value = "@{arg}" />
                 <args/>
             </exec>
         </sequential>
     </macrodef>
 
 
-<!--    &lt;!&ndash; Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив &ndash;&gt;-->
-<!--    <target name="team" depends="build" description="Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив">-->
-<!--        <mkdir dir="${team}" />-->
-<!--        <git command=""-->
-<!--    </target>-->
+    <!-- Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив -->
+    <target name="team" depends="build" description="Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив">
+        <mkdir dir="${team}" />
+        <git command="checkout" arg="HEAD~1 --force"/>
+        <antcall target="build"/>
+        <git command="checkout" arg="HEAD~1 --force"/>
+        <antcall target="build"/>
+        <git command="checkout" arg="HEAD~1 --force"/>
+        <antcall target="build"/>
+        <git command="checkout" arg="HEAD~1 --force"/>
+        <antcall target="build"/>
+    </target>
 
 
 </project>
