@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 public class MarkMaker implements Serializable {
 
+    // X
     @Setter
     private double xValue;
     @Getter @Setter
