@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro-Andrey.local" name="Lab3MISPITest" skipped="0" tests="10" time="2.915" timestamp="2023-06-21T11:41:10">
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-Andrey.local" name="Lab3MISPITest" skipped="0" tests="10" time="2.943" timestamp="2023-06-21T15:50:56">
   <properties>
     <property name="webapp" value="./target/webapp" />
+    <property name="file1.jar" value="./target/webapp1.jar" />
     <property name="ant.library.dir" value="/opt/homebrew/Cellar/ant/1.10.13/libexec/lib" />
     <property name="reports" value="reports" />
     <property name="ant.file.type" value="file" />
@@ -17,15 +18,18 @@
     <property name="sun.arch.data.model" value="64" />
     <property name="test.java" value="./src/test/java" />
     <property name="main-class" value="./src/main/java/com/anvisero/lab3mispi/beans/MarkManager.java" />
+    <property name="file2.jar" value="./target/webapp2.jar" />
     <property name="java.vendor.url" value="https://java.oracle.com/" />
     <property name="java.vm.specification.version" value="20" />
     <property name="os.name" value="Mac OS X" />
+    <property name="file3.jar" value="./target/webapp3.jar" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="user.country" value="US" />
     <property name="ant.file.web-programming-lab3" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/build.xml" />
     <property name="compiled.tests" value="./target/tests" />
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home/lib" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Lab3MISPITest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/reports/TEST-Lab3MISPITest.xml crashfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junitvmwatcher8363539127939205797.properties propsfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junit16432028186453463504.properties" />
+    <property name="zip" value="./target/team/webapp_4_previous_commits.zip" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Lab3MISPITest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/reports/TEST-Lab3MISPITest.xml crashfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junitvmwatcher4350056455090818298.properties propsfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junit3660305321102844938.properties" />
     <property name="jdk.debug" value="release" />
     <property name="test" value="./src/test" />
     <property name="sun.cpu.endian" value="little" />
@@ -65,7 +69,9 @@
     <property name="java.version" value="20.0.1" />
     <property name="user.dir" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI" />
     <property name="os.arch" value="aarch64" />
+    <property name="file4.jar" value="./target/webapp4.jar" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="team" value="./target/team" />
     <property name="ant.home" value="/opt/homebrew/Cellar/ant/1.10.13/libexec" />
     <property name="target" value="./target" />
     <property name="native.encoding" value="UTF-8" />
@@ -77,19 +83,20 @@
     <property name="java.vm.version" value="20.0.1+9-29" />
     <property name="sun.io.unicode.encoding" value="UnicodeBig" />
     <property name="compiled.classes" value="./target/classes" />
+    <property name="build.number" value="4" />
     <property name="java.class.version" value="64.0" />
     <property name="ant.project.default-target" value="build" />
   </properties>
-  <testcase classname="Lab3MISPITest" name="testThirdQuarter" time="0.063" />
-  <testcase classname="Lab3MISPITest" name="testFourthQuarter" time="0.041" />
-  <testcase classname="Lab3MISPITest" name="addPoint" time="0.001" />
+  <testcase classname="Lab3MISPITest" name="testThirdQuarter" time="0.053" />
+  <testcase classname="Lab3MISPITest" name="testFourthQuarter" time="0.053" />
+  <testcase classname="Lab3MISPITest" name="addPoint" time="0.0" />
   <testcase classname="Lab3MISPITest" name="testAxis" time="0.0" />
-  <testcase classname="Lab3MISPITest" name="randomPoint" time="0.002" />
-  <testcase classname="Lab3MISPITest" name="testSecondQuarter" time="2.713" />
+  <testcase classname="Lab3MISPITest" name="randomPoint" time="0.001" />
+  <testcase classname="Lab3MISPITest" name="testSecondQuarter" time="2.736" />
   <testcase classname="Lab3MISPITest" name="nullPointFields" time="0.001" />
   <testcase classname="Lab3MISPITest" name="testMarkCreating" time="0.0" />
   <testcase classname="Lab3MISPITest" name="getPoints" time="0.0" />
-  <testcase classname="Lab3MISPITest" name="testFirstQuarter" time="0.058" />
+  <testcase classname="Lab3MISPITest" name="testFirstQuarter" time="0.061" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -43,9 +43,12 @@
         <copy todir="${webInf.lib}">
             <fileset dir="${lib}"/>
         </copy>
+        <buildnumber/>
         <jar destfile="${file.jar}" basedir="${webapp}">
             <manifest>
-                  <attribute name="Main-Class" value="${main-class}"/>
+                <attribute name="Version" value="${build.number}"/>
+                <attribute name="Main-Class" value="${main-class}"/>
+                <attribute name="Author" value="Ivanov Andrey"/>
             </manifest>
         </jar>
         <echo>Building success!</echo>
@@ -104,17 +107,32 @@
 
 
     <!-- Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив -->
-    <target name="team" depends="build" description="Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив">
+    <target name="team" description="Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив">
         <mkdir dir="${team}" />
-        <git command="checkout" arg="HEAD~1 --force"/>
+        <echo message = "Switching to the previous commit..." />
+        <git command="checkout" arg="HEAD~1"/>
         <antcall target="build"/>
-        <git command="checkout" arg="HEAD~1 --force"/>
+        <move file="${file.jar}" tofile="${file1.jar}" />
+        <move file="${file1.jar}" todir="${team}"/>
+        <echo message = "Switching to the previous commit..." />
+        <git command="checkout" arg="HEAD~1"/>
         <antcall target="build"/>
-        <git command="checkout" arg="HEAD~1 --force"/>
+        <move file="${file.jar}" tofile="${file2.jar}" />
+        <move file="${file2.jar}" todir="${team}"/>
+        <echo message = "Switching to the previous commit..." />
+        <git command="checkout" arg="HEAD~1"/>
         <antcall target="build"/>
-        <git command="checkout" arg="HEAD~1 --force"/>
+        <move file="${file.jar}" tofile="${file3.jar}" />
+        <move file="${file3.jar}" todir="${team}"/>
+        <echo message = "Switching to the previous commit..." />
+        <git command="checkout" arg="HEAD~1"/>
         <antcall target="build"/>
+        <move file="${file.jar}" tofile="${file4.jar}" />
+        <move file="${file4.jar}" todir="${team}"/>
+        <echo message = "Packing the resulting .jar files into a .zip archive..." />
+        <zip destfile="${zip}">
+            <fileset dir="${team}" includes="*.jar"/>
+        </zip>
+        <echo message = "Packing success!" />
     </target>
-
-
 </project>
