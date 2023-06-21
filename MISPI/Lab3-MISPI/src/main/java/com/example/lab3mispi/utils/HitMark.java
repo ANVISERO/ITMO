@@ -1,4 +1,4 @@
-package com.anvisero.lab3mispi.utils;
+package com.example.lab3mispi.utils;
 
 public class HitMark {
 

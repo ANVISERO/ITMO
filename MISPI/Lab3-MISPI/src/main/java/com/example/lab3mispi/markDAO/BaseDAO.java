@@ -1,4 +1,4 @@
-package com.anvisero.lab3mispi.markDAO;
+package com.example.lab3mispi.markDAO;
 
 
 import java.util.List;

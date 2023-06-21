@@ -1,10 +1,11 @@
-package com.anvisero.lab3mispi.service;
+package com.example.lab3mispi.service;
 
 
 
-import com.anvisero.lab3mispi.markDAO.MarkDAO;
-import com.anvisero.lab3mispi.markDTO.MarkDTO;
-import com.anvisero.lab3mispi.model.Mark;
+
+import com.example.lab3mispi.markDAO.MarkDAO;
+import com.example.lab3mispi.markDTO.MarkDTO;
+import com.example.lab3mispi.model.Mark;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

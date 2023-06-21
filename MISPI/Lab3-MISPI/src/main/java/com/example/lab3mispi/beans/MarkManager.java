@@ -1,9 +1,10 @@
-package com.anvisero.lab3mispi.beans;
+package com.example.lab3mispi.beans;
 
 
-import com.anvisero.lab3mispi.markDTO.MarkDTO;
-import com.anvisero.lab3mispi.model.Mark;
-import com.anvisero.lab3mispi.service.MarkService;
+
+import com.example.lab3mispi.markDTO.MarkDTO;
+import com.example.lab3mispi.model.Mark;
+import com.example.lab3mispi.service.MarkService;
 import lombok.*;
 
 import javax.annotation.ManagedBean;

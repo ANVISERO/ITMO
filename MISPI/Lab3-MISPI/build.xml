@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="web-programming-lab3" default="build">
+
+    <!-- Загрузка параметров из файла -->
+    <property file="build.properties"/>
+
+    <!-- Путь к дополнительным джарникам -->
+    <path id="classpath.source">
+        <fileset dir="${lib}" includes="*.jar"/>
+    </path>
+
+    <!-- Определение целей (targets) -->
+
+    <!-- Компиляция исходных кодов проекта -->
+    <target name="compile" description="Компиляция исходных кодов проекта">
+        <echo>Compilation...</echo>
+        <mkdir dir="${compiled.classes}"/>
+        <javac includeantruntime="false" srcdir="${main}" destdir="${compiled.classes}">
+            <classpath refid="classpath.source"/>
+        </javac>
+        <mkdir dir="${compiled.tests}"/>
+        <javac includeantruntime="false" srcdir="${test}" destdir="${compiled.tests}">
+            <classpath>
+                <path refid="classpath.source"/>
+                <pathelement location="${compiled.classes}"/>
+            </classpath>
+        </javac>
+        <echo>Compilation success!</echo>
+    </target>
+
+<!--     Упаковка проекта в исполняемый JAR-архив -->
+    <target name="build" depends="compile" description="Упаковка скомпилированных файлов в исполняемый jar-архив">
+        <echo>Building...</echo>
+        <sayhello />
+        <mkdir dir="${webapp}"/>
+        <copy todir="${webapp}">
+            <fileset dir="${web}"/>
+        </copy>
+        <mkdir dir="${webInf.classes}"/>
+        <copy todir="${webInf.classes}">
+            <fileset dir="${compiled.classes}"/>
+        </copy>
+        <mkdir dir="${webInf.lib}"/>
+        <copy todir="${webInf.lib}">
+            <fileset dir="${lib}"/>
+        </copy>
+        <jar destfile="${file.jar}" basedir="${webapp}">
+            <manifest>
+                  <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+        <echo>Building success!</echo>
+    </target>
+
+    <!-- Удаление скомпилированных классов и всех временных файлов (если они есть) -->
+    <target name="clean" description="Удаление скомпилированных классов проекта и всех временных файлов (если они есть)">
+        <echo>Cleaning...</echo>
+        <delete dir="${target}"/>
+        <echo>Cleaning done!</echo>
+    </target>
+
+    <!-- Запуск junit-тестов -->
+    <target name="test" depends="build" description="Запуск junit-тестов проекта">
+        <echo>Testing..</echo>
+        <mkdir dir="${reports}"/>
+        <junit printsummary="yes" fork="yes" haltonfailure="no">
+            <formatter type="xml"/>
+            <classpath>
+                <path refid="classpath.source"/>
+                <pathelement location="${compiled.classes}"/>
+                <pathelement location="${compiled.tests}"/>
+            </classpath>
+            <batchtest todir="${reports}">
+                <fileset dir="${test.java}">
+                    <include name="*.java" />
+                </fileset>
+            </batchtest>
+        </junit>
+        <echo>Testing complete!</echo>
+    </target>
+
+    <!-- Воспроизведение музыки по завершению сборки -->
+    <target name="music" depends="build" description="Воспроизведение музыки по завершению сборки">
+        <taskdef name="sound" classname="org.apache.tools.ant.taskdefs.optional.sound.SoundTask"/>
+        <sound>
+            <success source="${sound-success}"/>
+            <fail source="${sound-failure}"/>
+        </sound>
+    </target>
+
+<!--    Макрос для работы с гитом-->
+    <macrodef name = "git">
+        <attribute name = "command" />
+        <attribute name = "dir" default = "" />
+        <element name = "args" optional = "true" />
+        <sequential>
+            <echo message = "git @{command}" />
+            <exec executable = "git" dir = "@{dir}">
+                <arg value = "@{command}" />
+                <args/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+
+<!--    &lt;!&ndash; Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив &ndash;&gt;-->
+<!--    <target name="team" depends="build" description="Получение 4 предыдущих ревизий из git, сборка и упаковка в zip-архив">-->
+<!--        <mkdir dir="${team}" />-->
+<!--        <git command=""-->
+<!--    </target>-->
+
+
+</project>

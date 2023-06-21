@@ -1,8 +1,8 @@
-package com.anvisero.lab3mispi.beans;
+package com.example.lab3mispi.beans;
 
 
-import com.anvisero.lab3mispi.model.Mark;
-import com.anvisero.lab3mispi.utils.HitMark;
+import com.example.lab3mispi.model.Mark;
+import com.example.lab3mispi.utils.HitMark;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

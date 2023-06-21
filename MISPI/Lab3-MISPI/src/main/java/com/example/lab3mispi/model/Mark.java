@@ -1,7 +1,8 @@
-package com.anvisero.lab3mispi.model;
+package com.example.lab3mispi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -9,10 +10,11 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Mark {
-    private double xValue;
-    private double yValue;
-    private double rValue;
+    private Double xValue;
+    private Double yValue;
+    private Double rValue;
     private String hit;
     private LocalDateTime time;
     private long leadTime;

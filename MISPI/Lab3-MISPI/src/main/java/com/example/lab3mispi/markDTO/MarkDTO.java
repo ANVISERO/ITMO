@@ -1,4 +1,4 @@
-package com.anvisero.lab3mispi.markDTO;
+package com.example.lab3mispi.markDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,9 +1,9 @@
-package com.anvisero.lab3mispi.markDAO;
+package com.example.lab3mispi.markDAO;
 
 
 
-import com.anvisero.lab3mispi.model.Mark;
-import com.anvisero.lab3mispi.utils.PropertiesUtil;
+
+import com.example.lab3mispi.model.Mark;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -14,9 +14,6 @@ import java.util.UUID;
 import static java.lang.Math.abs;
 
 public class MarkDAO implements BaseDAO<Mark> {
-    private static final String PASSWORD_KEY = "db.password";
-    private static final String USERNAME_KEY = "db.username";
-    private static final String URL_KEY = "db.url";
     private Connection connection;
 
     public MarkDAO() {
@@ -68,10 +65,7 @@ public class MarkDAO implements BaseDAO<Mark> {
 
     private void initScript() {
         try {
-            connection = DriverManager.getConnection(
-                    PropertiesUtil.get(URL_KEY),
-                    PropertiesUtil.get(USERNAME_KEY),
-                    PropertiesUtil.get(PASSWORD_KEY));
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/anvisero", "anvisero", "123");
             String sql = "CREATE TABLE IF NOT EXISTS marks\n" +
                     "(\n" +
                     "    id                     SERIAL PRIMARY KEY UNIQUE,\n" +
