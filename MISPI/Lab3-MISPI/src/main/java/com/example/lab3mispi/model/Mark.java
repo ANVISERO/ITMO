@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Mark {
+    // xValue
     private Double xValue;
     private Double yValue;
     private Double rValue;
