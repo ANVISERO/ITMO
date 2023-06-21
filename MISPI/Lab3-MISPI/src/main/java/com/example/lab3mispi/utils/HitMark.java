@@ -1,6 +1,7 @@
 package com.example.lab3mispi.utils;
 
 public class HitMark {
+    // Checks the hit of the mark
 
     public static boolean hitMark (double x, double y, double r){
         return hitInCircle(x, y, r) || hitInRectangle(x, y, r) || hitInTriangle(x, y, r);
