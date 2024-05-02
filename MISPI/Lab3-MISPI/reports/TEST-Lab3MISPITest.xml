@@ -1,35 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro-Andrey.local" name="Lab3MISPITest" skipped="0" tests="10" time="2.943" timestamp="2023-06-21T15:50:56">
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-Andrey.local" name="Lab3MISPITest" skipped="0" tests="10" time="0.985" timestamp="2023-09-18T07:32:18">
   <properties>
     <property name="webapp" value="./target/webapp" />
+    <property name="gopherProxySet" value="false" />
     <property name="file1.jar" value="./target/webapp1.jar" />
-    <property name="ant.library.dir" value="/opt/homebrew/Cellar/ant/1.10.13/libexec/lib" />
     <property name="reports" value="reports" />
+    <property name="ant.library.dir" value="/opt/homebrew/Cellar/ant/1.10.13/libexec/lib" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
     <property name="ant.file.type" value="file" />
-    <property name="java.specification.version" value="20" />
+    <property name="java.specification.version" value="11" />
     <property name="lib" value="./lib" />
     <property name="ant.project.name" value="web-programming-lab3" />
+    <property name="sun.cpu.isalist" value="" />
     <property name="ant.file.type.web-programming-lab3" value="file" />
     <property name="sun.jnu.encoding" value="UTF-8" />
     <property name="webInf.classes" value="./target/webapp/WEB-INF/classes" />
     <property name="java.class.path" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/ant-contrib-1.0b3.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/byte-buddy-1.12.8.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/hamcrest-core-1.3.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/javaee-api-7.0.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/javassist-3.18.1-GA.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/javax.faces-2.2.10.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/javax.servlet-api-3.0.1.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/jboss-logging-3.4.3.Final.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/jsf-api-2.2.18.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/jsf-impl-2.2.18.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/jsoup-1.14.3.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/jsp-api-2.0.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/jstl-1.2.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/junit-4.12.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/lombok-1.18.26.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/postgresql-42.2.14.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/primefaces-5.3.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/slf4j-api-1.7.7.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/txw2-3.0.2.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/lib/xml-apis-1.0.b2.jar:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/target/classes:/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/target/tests:/opt/homebrew/Cellar/ant/1.10.13/libexec/lib/ant-launcher.jar:/opt/homebrew/Cellar/ant/1.10.13/libexec/lib/ant.jar:/opt/homebrew/Cellar/ant/1.10.13/libexec/lib/ant-junit.jar:/opt/homebrew/Cellar/ant/1.10.13/libexec/lib/ant-junit4.jar" />
     <property name="main" value="./src/main" />
-    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.vm.vendor" value="Amazon.com Inc." />
     <property name="sun.arch.data.model" value="64" />
     <property name="test.java" value="./src/test/java" />
     <property name="main-class" value="./src/main/java/com/anvisero/lab3mispi/beans/MarkManager.java" />
     <property name="file2.jar" value="./target/webapp2.jar" />
-    <property name="java.vendor.url" value="https://java.oracle.com/" />
-    <property name="java.vm.specification.version" value="20" />
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/" />
+    <property name="user.timezone" value="" />
+    <property name="java.vm.specification.version" value="11" />
     <property name="os.name" value="Mac OS X" />
     <property name="file3.jar" value="./target/webapp3.jar" />
-    <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="user.country" value="US" />
-    <property name="ant.file.web-programming-lab3" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/build.xml" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="compiled.tests" value="./target/tests" />
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home/lib" />
+    <property name="ant.file.web-programming-lab3" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/build.xml" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/lib" />
     <property name="zip" value="./target/team/webapp_4_previous_commits.zip" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Lab3MISPITest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/reports/TEST-Lab3MISPITest.xml crashfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junitvmwatcher4350056455090818298.properties propsfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junit3660305321102844938.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Lab3MISPITest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/reports/TEST-Lab3MISPITest.xml crashfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junitvmwatcher10166239361526076742.properties propsfile=/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/junit13949769639646569025.properties" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="jdk.debug" value="release" />
     <property name="test" value="./src/test" />
     <property name="sun.cpu.endian" value="little" />
@@ -37,66 +42,68 @@
     <property name="user.language" value="en" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="java.version.date" value="2023-04-18" />
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home" />
     <property name="basedir" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI" />
     <property name="file.separator" value="/" />
     <property name="java.vm.compressedOopsMode" value="Zero based" />
     <property name="line.separator" value="&#xa;" />
-    <property name="ant.java.version" value="20" />
+    <property name="ant.java.version" value="11" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
     <property name="sound-success" value="sounds/fanfaryi-podvodyaschie-itogi.wav" />
-    <property name="apple.awt.application.name" value="JUnitTestRunner" />
     <property name="file.jar" value="./target/webapp.jar" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
-    <property name="java.runtime.version" value="20.0.1+9-29" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.runtime.version" value="11.0.19+7-LTS" />
     <property name="java.security.manager" value="allow" />
     <property name="user.name" value="anvisero" />
     <property name="ant.file" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI/build.xml" />
-    <property name="stdout.encoding" value="UTF-8" />
     <property name="path.separator" value=":" />
+    <property name="os.version" value="13.5.2" />
     <property name="sound-failure" value="sounds/nepravilno-poprobuy-esch-raz.wav" />
-    <property name="os.version" value="13.4" />
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
     <property name="file.encoding" value="UTF-8" />
     <property name="ant.project.invoked-targets" value="test" />
     <property name="web" value="./src/main/webapp" />
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="java.vendor.version" value="Corretto-11.0.19.7.1" />
     <property name="ant.core.lib" value="/opt/homebrew/Cellar/ant/1.10.13/libexec/lib/ant.jar" />
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/" />
     <property name="java.io.tmpdir" value="/var/folders/f7/38xlz53n1wl6prz1vzfcv1zm0000gn/T/" />
     <property name="webInf.lib" value="./target/webapp/WEB-INF/lib" />
-    <property name="java.version" value="20.0.1" />
+    <property name="java.version" value="11.0.19" />
     <property name="user.dir" value="/Users/anvisero/Desktop/ITMO/GitHub/ITMO/MISPI/Lab3-MISPI" />
-    <property name="os.arch" value="aarch64" />
+    <property name="os.arch" value="x86_64" />
     <property name="file4.jar" value="./target/webapp4.jar" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
     <property name="team" value="./target/team" />
     <property name="ant.home" value="/opt/homebrew/Cellar/ant/1.10.13/libexec" />
+    <property name="sun.os.patch.level" value="unknown" />
     <property name="target" value="./target" />
-    <property name="native.encoding" value="UTF-8" />
     <property name="ant.version" value="Apache Ant(TM) version 1.10.13 compiled on January 4 2023" />
     <property name="java.library.path" value="/Users/anvisero/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
-    <property name="java.vendor" value="Oracle Corporation" />
-    <property name="stderr.encoding" value="UTF-8" />
-    <property name="java.vm.info" value="mixed mode, sharing" />
-    <property name="java.vm.version" value="20.0.1+9-29" />
+    <property name="java.vendor" value="Amazon.com Inc." />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="java.vm.version" value="11.0.19+7-LTS" />
     <property name="sun.io.unicode.encoding" value="UnicodeBig" />
     <property name="compiled.classes" value="./target/classes" />
-    <property name="build.number" value="4" />
-    <property name="java.class.version" value="64.0" />
+    <property name="build.number" value="6" />
+    <property name="java.class.version" value="55.0" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="ant.project.default-target" value="build" />
   </properties>
-  <testcase classname="Lab3MISPITest" name="testThirdQuarter" time="0.053" />
-  <testcase classname="Lab3MISPITest" name="testFourthQuarter" time="0.053" />
-  <testcase classname="Lab3MISPITest" name="addPoint" time="0.0" />
-  <testcase classname="Lab3MISPITest" name="testAxis" time="0.0" />
-  <testcase classname="Lab3MISPITest" name="randomPoint" time="0.001" />
-  <testcase classname="Lab3MISPITest" name="testSecondQuarter" time="2.736" />
-  <testcase classname="Lab3MISPITest" name="nullPointFields" time="0.001" />
-  <testcase classname="Lab3MISPITest" name="testMarkCreating" time="0.0" />
+  <testcase classname="Lab3MISPITest" name="testThirdQuarter" time="0.168" />
+  <testcase classname="Lab3MISPITest" name="testFourthQuarter" time="0.132" />
+  <testcase classname="Lab3MISPITest" name="addPoint" time="0.001" />
+  <testcase classname="Lab3MISPITest" name="testAxis" time="0.004" />
+  <testcase classname="Lab3MISPITest" name="randomPoint" time="0.011" />
+  <testcase classname="Lab3MISPITest" name="testSecondQuarter" time="0.367" />
+  <testcase classname="Lab3MISPITest" name="nullPointFields" time="0.0" />
+  <testcase classname="Lab3MISPITest" name="testMarkCreating" time="0.001" />
   <testcase classname="Lab3MISPITest" name="getPoints" time="0.0" />
-  <testcase classname="Lab3MISPITest" name="testFirstQuarter" time="0.061" />
+  <testcase classname="Lab3MISPITest" name="testFirstQuarter" time="0.128" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
