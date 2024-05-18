@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="web-lab-3" default="build" basedir=".">
+
+    <property file="build.properties"/>
+
+    <path id="classpath.source">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <target name="compile">
+        <echo message="--- DU ---"/>
+        <mkdir dir="${compiled.classes}"/>
+        <mkdir dir="${compiled.tests}"/>
+
+        <javac destdir="${compiled.classes}" includeantruntime="false">
+            <src path="${main}"/>
+            <classpath>
+                <pathelement location="${compiled.classes}"/>
+                <path refid="classpath.source"/>
+            </classpath>
+        </javac>
+
+        <javac destdir="${compiled.tests}" includeantruntime="false">
+            <src path="${test}"/>
+            <classpath>
+                <pathelement location="${compiled.classes}"/>
+                <path refid="classpath.source"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <echo message="--- DU HASST ---"/>
+        <jar destfile="${dest.jar}" basedir="${compiled.classes}" manifest="src/META-INF/MANIFEST.MF" compress="false" index="true">
+        </jar>
+    </target>
+
+    <target name="clean">
+        <echo message="--- SCHWULER! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ---"/>
+        <delete dir="${compiled}"/>
+    </target>
+
+    <target name="mkdir-reports" unless="reports.exists">
+        <mkdir dir="reports" />
+    </target>
+
+    <target name="test" depends="build">
+        <echo message="--- DU HASST MICH ---"/>
+        <available file="reports" property="reports.exists" />
+        <antcall target="mkdir-reports" />
+        <junit fork="true" printsummary="on">
+            <formatter type="xml"/>
+            <classpath>
+                <path refid="classpath.source"/>
+                <pathelement location="${compiled.classes}"/>
+                <pathelement location="${compiled.tests}"/>
+            </classpath>
+            <batchtest todir="reports">
+                <fileset dir="${test}" includes="*Test*.java"/>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="music" depends="build">
+        <echo message="--- RAMMSTEIN ---"/>
+        <exec executable="${musicPlayer}">
+            <arg value="${music}"/>
+            <arg value="-p"/>
+        </exec>
+    </target>
+
+    <target name="report" depends="test">
+        <available file="reports/.svn" property="has.svn.dir"/>
+        <exec executable="svn">
+            <arg value="checkout"/>
+            <arg value="file:///home/studs/s319066/svn-server/repository"/>
+            <arg value="reports"/>
+        </exec>
+        <exec executable="svn" dir="reports">
+            <arg value="add"/>
+            <arg value="TEST-HitTest.xml"/>
+        </exec>
+        <exec executable="svn" dir="reports">
+            <arg value="commit"/>
+            <arg value="-m"/>
+            <arg value="Added TEST-HitTest.xml"/>
+        </exec>
+    </target>
+</project>

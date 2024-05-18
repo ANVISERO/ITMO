@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="DESKTOP-IEF7HJV" name="HitTest" skipped="0" tests="3" time="0.323" timestamp="2023-06-13T22:31:54">
+  <properties>
+    <property name="java.vendor" value="OpenLogic-OpenJDK" />
+    <property name="lib.dir" value="lib/" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="musicPlayer" value="&quot;lib/cmdmp3.exe&quot;" />
+    <property name="os.name" value="Windows 10" />
+    <property name="sun.boot.class.path" value="C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\resources.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\rt.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\sunrsasign.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\jsse.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\jce.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\charsets.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\jfr.jar;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\classes" />
+    <property name="compiled.classes" value="target/classes" />
+    <property name="compiled.tests" value="target/tests" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\apache-ant-1.9.16" />
+    <property name="java.runtime.version" value="1.8.0_372-372-b07" />
+    <property name="user.name" value="chesn" />
+    <property name="main" value="src/main/java/" />
+    <property name="reports.exists" value="true" />
+    <property name="ant.file.web-lab-3" value="C:\cloned-projects\web-lab-3\build.xml" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\bin" />
+    <property name="dest.jar" value="target/lab3.jar" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="ant.project.name" value="web-lab-3" />
+    <property name="java.version" value="1.8.0_372-372" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="music" value="sound.mp3" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\cloned-projects\web-lab-3\build.xml" />
+    <property name="os.version" value="10.0" />
+    <property name="ant.file.type.web-lab-3" value="file" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="25.372-b07" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\apache-ant-1.9.16\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="java.specification.maintenance.version" value="4" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="sun.stdout.encoding" value="cp850" />
+    <property name="user.script" value="" />
+    <property name="user.home" value="C:\Users\chesn" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="test" value="src/test/java/" />
+    <property name="java.library.path" value="C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;%ANT_HOME%\bin;C:\Program Files\TortoiseSVN\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\chesn\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.2\bin;;C:\apache-ant-1.9.16\bin;;C:\Users\chesn\AppData\Local\Programs\Microsoft VS Code\bin;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HitTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\cloned-projects\web-lab-3\reports\TEST-HitTest.xml crashfile=C:\cloned-projects\web-lab-3\junitvmwatcher6913151427993467971.properties propsfile=C:\cloned-projects\web-lab-3\junit4239656745464285786.properties" />
+    <property name="java.class.path" value="C:\cloned-projects\web-lab-3\lib\ant-contrib-1.0b3.jar;C:\cloned-projects\web-lab-3\lib\apiguardian-api-1.1.2.jar;C:\cloned-projects\web-lab-3\lib\hamcrest-core-1.3.jar;C:\cloned-projects\web-lab-3\lib\jakarta.persistence-2.2.3.jar;C:\cloned-projects\web-lab-3\lib\javaee-api-7.0.jar;C:\cloned-projects\web-lab-3\lib\javax.servlet-api-3.1.0.jar;C:\cloned-projects\web-lab-3\lib\jsf-api-2.2.15.jar;C:\cloned-projects\web-lab-3\lib\jsf-impl-2.2.11.jar;C:\cloned-projects\web-lab-3\lib\junit-4.13.2.jar;C:\cloned-projects\web-lab-3\lib\junit-jupiter-5.9.3.jar;C:\cloned-projects\web-lab-3\lib\junit-jupiter-api-5.9.3.jar;C:\cloned-projects\web-lab-3\lib\opentest4j-1.0.0-M1.jar;C:\cloned-projects\web-lab-3\lib\postgresql-42.5.3.jar;C:\cloned-projects\web-lab-3\target\classes;C:\cloned-projects\web-lab-3\target\tests;C:\apache-ant-1.9.16\lib\ant-launcher.jar;C:\apache-ant-1.9.16\lib\ant.jar;C:\apache-ant-1.9.16\lib\ant-junit.jar;C:\apache-ant-1.9.16\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.16 compiled on July 10 2021" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="java.io.tmpdir" value="C:\Users\chesn\AppData\Local\Temp\" />
+    <property name="compiled" value="target" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="C:\Program Files\OpenLogic\jdk-8.0.372.07-hotspot\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\cloned-projects\web-lab-3" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="basedir" value="C:\cloned-projects\web-lab-3" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="C:\apache-ant-1.9.16\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="sun.stderr.encoding" value="cp850" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="report" />
+  </properties>
+  <testcase classname="HitTest" name="testHitOnCorrectLimitData" time="0.225" />
+  <testcase classname="HitTest" name="testHitOnIncorrectData" time="0.037" />
+  <testcase classname="HitTest" name="testHitOnCorrectData" time="0.03" />
+  <system-out><![CDATA[Input coords: 0.0, 2.999999999, 3.0
+Input coords: 30.0, 1.0, 3.0
+Input coords: 2.0, 1.0, 3.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
