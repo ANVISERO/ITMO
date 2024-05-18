@@ -1,0 +1,102 @@
+{
+  "id": "4256e00f-4721-4945-b880-15721779bbfe",
+  "version": "2.0",
+  "name": "lab3",
+  "url": "https://promopult.ru",
+  "tests": [{
+    "id": "1fca30cf-2170-4acb-8e79-a0c27996f62f",
+    "name": "Вход",
+    "commands": [{
+      "id": "4c0ba507-aa15-4ff5-ad91-7a440ca378d5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ed1d360-29a9-4bb5-aad2-07f5c9c4b573",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a20a3125-5291-4afa-b919-545680621f66",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//header[@id='top-panel']/div/div/div/div[3]/div/ul/li/a/span",
+      "targets": [
+        ["css=.auth__link-login > span", "css:finder"],
+        ["xpath=//header[@id='top-panel']/div/div/div/div[3]/div/ul/li/a/span", "xpath:idRelative"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c33815c-36a9-4370-b030-9ecca02eb31b",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='login-uname']",
+      "targets": [
+        ["id=login-uname", "id"],
+        ["name=uname", "name"],
+        ["css=#login-uname", "css:finder"],
+        ["xpath=//input[@id='login-uname']", "xpath:attributes"],
+        ["xpath=//form[@id='rtm-login-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "abc@gmail.com"
+    }, {
+      "id": "8e15039e-bff8-4ba8-8b9a-e8087419bfb6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='login-pass']",
+      "targets": [
+        ["id=login-pass", "id"],
+        ["name=pass", "name"],
+        ["css=#login-pass", "css:finder"],
+        ["xpath=//input[@id='login-pass']", "xpath:attributes"],
+        ["xpath=//form[@id='rtm-login-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3abc5e1-72df-40a3-b0ba-dd7b07e22ec8",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='login-pass']",
+      "targets": [
+        ["id=login-pass", "id"],
+        ["name=pass", "name"],
+        ["css=#login-pass", "css:finder"],
+        ["xpath=//input[@id='login-pass']", "xpath:attributes"],
+        ["xpath=//form[@id='rtm-login-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "3064228f-a760-4b51-8771-99416fbca3b4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='rtm-login-form']/div[3]/input",
+      "targets": [
+        ["id=login-btn", "id"],
+        ["css=#login-btn", "css:finder"],
+        ["xpath=//input[@id='login-btn']", "xpath:attributes"],
+        ["xpath=//form[@id='rtm-login-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7b7fae46-3966-4fe7-8718-d4705d0fed1c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://promopult.ru/"],
+  "plugins": []
+}
