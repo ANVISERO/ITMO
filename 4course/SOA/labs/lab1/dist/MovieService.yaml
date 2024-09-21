@@ -31,7 +31,37 @@ paths:
           content:
             application/xml:
               schema:
-                $ref: "#/components/schemas/Error400"
+                xml: 
+                  name: Error
+                type: object
+                required:
+                  - message
+                  - invalidFields
+                  - time
+                properties:
+                  message:
+                    type: string
+                    example: Bad Request
+                  invalidFields:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: oscarsCount
+                        reason:
+                          type: string
+                          example: oscarsCount must be a number
+                      xml:
+                        name: invalidField
+                    xml:
+                      wrapped: true
+                      name: invalidFields
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2024-09-13T00:00:13
         '404':
           description: Not Found
           content:
@@ -44,6 +74,12 @@ paths:
             application/xml:
               schema:
                 $ref: "#/components/schemas/Error414"
+        '422':
+          description: Unprocessable Entity
+          content:
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/Error422"
         '429':
           description: Too Many Requests
           content:
@@ -159,6 +195,12 @@ paths:
             application/xml:
               schema:
                 $ref: "#/components/schemas/Error414"
+        '422':
+          description: Unprocessable Entity
+          content:
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/Error422"
         '429':
           description: Too Many Requests
           content:
@@ -246,7 +288,37 @@ paths:
           content:
             application/xml:
               schema:
-                $ref: "#/components/schemas/Error400"
+                xml: 
+                  name: Error
+                type: object
+                required:
+                  - message
+                  - invalidFields
+                  - time
+                properties:
+                  message:
+                    type: string
+                    example: Bad Request
+                  invalidFields:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: FilterRequest.page
+                        reason:
+                          type: string
+                          example: FilterRequest.page must be a number
+                      xml:
+                        name: invalidField
+                    xml:
+                      wrapped: true
+                      name: invalidFields
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2024-09-13T00:00:13
         '404':
           description: Not Found
           content:
@@ -259,6 +331,42 @@ paths:
             application/xml:
               schema:
                 $ref: "#/components/schemas/Error414"
+        '422':
+          description: Unprocessable Entity
+          content:
+            application/xml:
+              schema:
+                xml: 
+                  name: Error
+                type: object
+                required:
+                  - message
+                  - invalidFields
+                  - time
+                properties:
+                  message:
+                    type: string
+                    example: Unprocessable Entity
+                  invalidFields:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: FilterRequest.page
+                        reason:
+                          type: string
+                          example: FilterRequest.page must be greater or equals to zero
+                      xml:
+                        name: invalidField
+                    xml:
+                      wrapped: true
+                      name: invalidFields
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2024-09-13T00:00:13
         '429':
           description: Too Many Requests
           content:
@@ -361,7 +469,7 @@ components:
         - NSUBSTR
       nullable: true
       example: EQ
-      description: Filters EQ, NE, SUBSTR, NSUBSTR can be applied to the string fields, while filters EQ, NE, GT, GTE, LT, LTE can be aplied to number fields.
+      description: Filters EQ, NE, SUBSTR, NSUBSTR can be applied to the string fields, while filters EQ, NE, GT, GTE, LT, LTE can be aplied to number fields. EQ - equals, NE - not equals, GT - greater than, GTE - greater than or equals, LT - lower than, LTE - lower than or equals, SUBSTR - find string containing substring in field 'value', NSUBSTR - find string not containing substring in field 'value'
     Person:
       type: object
       required:
@@ -371,7 +479,7 @@ components:
         name:
           type: string
           nullable: false
-          empty: false
+          minLength: 1
           example: Andrey
         birthday:
           type: string
@@ -416,7 +524,7 @@ components:
         name:
           type: string
           nullable: false
-          empty: false
+          minLength: 1
           example: Interstellar
         coordinates:
           $ref: "#/components/schemas/Coordinates"
@@ -458,7 +566,7 @@ components:
         name:
           type: string
           nullable: false
-          empty: false
+          minLength: 1
           example: Interstellar
         coordinates:
           $ref: "#/components/schemas/Coordinates"
@@ -485,14 +593,6 @@ components:
           nullable: false
           minimum: 1
           example: 1
-    MovieResponseList:
-      type: array
-      xml: 
-        name: List
-        wrapped: true
-      items:
-        type: object
-        $ref: "#/components/schemas/MovieResponse"
     SearchResponse:
       type: object
       properties:
@@ -510,7 +610,7 @@ components:
               name:
                 type: string
                 nullable: false
-                empty: false
+                minLength: 1
                 example: Interstellar
               coordinates:
                 $ref: "#/components/schemas/Coordinates"
@@ -557,9 +657,11 @@ components:
           field:
             type: string
             example: name
+            description: field by which the sorting will be performed
           type:
             type: string
             example: asc
+            description: order of sort (asc - ascenting, desc - descending)
         xml:
           name: sorting
       xml:
@@ -576,11 +678,13 @@ components:
           field:
             type: string
             example: name
+            description: field by which the filter will be performed
           filterType:
             $ref: '#/components/schemas/FilterType'
           value:
             type: string
             example: Interstellar
+            description: the value based on which the filter will be applied
         xml:
           name: filter
       xml:
@@ -592,10 +696,12 @@ components:
           type: integer
           format: int32
           example: 0
+          description: page number (must be greater or equals to zero)
         pageSize:
           type: integer
           format: int32
           example: 10
+          description: page size (must be greater or equals to one)
         sortings:
           $ref: '#/components/schemas/SortList'
         filters:
@@ -617,7 +723,7 @@ components:
               name:
                 type: string
                 nullable: false
-                empty: false
+                minLength: 1
                 example: Interstellar
               coordinates:
                 $ref: "#/components/schemas/Coordinates"
@@ -681,10 +787,10 @@ components:
             properties:
               name:
                 type: string
-                example: creationDate
+                example: id
               reason:
                 type: string
-                example: date must have a pattern yyyy-MM-ddTHH:mm:ss
+                example: id must be a number
             xml:
               name: invalidField
           xml:
@@ -720,6 +826,38 @@ components:
         message:
           type: string
           example: URI is too long
+        time:
+          type: string
+          format: date-time
+          example: 2024-09-13T00:00:13
+    Error422:
+      xml: 
+        name: Error
+      type: object
+      required:
+        - message
+        - invalidFields
+        - time
+      properties:
+        message:
+          type: string
+          example: Unprocessable Entity
+        invalidFields:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: screenwriter.birthday
+              reason:
+                type: string
+                example: screenwriter.birthday can not be in future
+            xml:
+              name: invalidField
+          xml:
+            wrapped: true
+            name: invalidFields
         time:
           type: string
           format: date-time
