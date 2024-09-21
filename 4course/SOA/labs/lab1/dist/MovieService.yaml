@@ -266,7 +266,48 @@ paths:
   /movies/search:
     post:
       summary: Get list of movies using filters and sorting
-      description: Get list of movies using filters and sorting
+      description: |
+        Get list of movies using filters and sorting.
+
+        **Filter:**
+
+        - **EQ** - equals (applicable to **number**, **string**, **date**, **enum**)
+        - **NE** - not equals (applicable to **number**, **string**, **date**, **enum**)
+        - **GT** - greater than (applicable to **number**, **date**)
+        - **GTE** - greater than or equals (applicable to **number**, **date**)
+        - **LT** - lower than (applicable to **number**, **date**)
+        - **LTE** - lower than or equals (applicable to **number**, **date**)
+        - **SUBSTR** - find string containing substring in field **value** (applicable to **string**)
+        - **NSUBSTR** - find string not containing substring in field **value** (applicable to **string**)
+        
+        Filters can be aplied to several fields.
+
+        **Sort:**
+
+        Sortings can be of two different types **asc** – ascending and **desc** – descending. 
+
+        **Sortings** and **Filters** can be aplied to several fields:
+
+          - id
+          - name
+          - coordinates.x
+          - coordinates.y
+          - creationDate
+          - oscarsCount
+          - genre
+          - mpaaRating
+          - screenwriter.name
+          - screenwriter.birthday
+          - screenwriter.height
+          - screenwriter.hairColor
+          - screenwriter.hairColor
+
+        **Pagination parameters**
+
+        **Page** – page number (0 or greater)
+
+        **PageSize** – amount of output items per page (1 or greater)
+
       operationId: searchMovies
       tags:
         - Base movie operations
